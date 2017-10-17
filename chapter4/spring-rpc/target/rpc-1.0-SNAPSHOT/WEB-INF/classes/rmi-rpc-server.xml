@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+    <!-- 将userService暴露为远程服务 -->
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <!-- 这里的服务名可以随意填写但是必须和rmi://hostname:1199/xxxxxxx的xxxxxxx相同 -->
+        <property name="serviceName" value="userRmiService"/>
+        <property name="service" ref="userService"/>
+        <property name="serviceInterface" value="rpc.common.UserService"/>
+        <!-- 端口号，默认为1099，这里注意占用问题 -->
+        <property name="registryPort" value="1199"/>
+    </bean>
+
+
+</beans>

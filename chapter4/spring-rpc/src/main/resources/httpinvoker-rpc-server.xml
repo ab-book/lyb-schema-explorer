@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+    <import resource="common-config.xml"/>
+
+    <!-- 将userService暴露为远程服务 -->
+    <bean id="serviceHttpInvokeExporter" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+        <property name="service" ref="userService" />
+        <property name="serviceInterface" value="rpc.common.UserService" />
+    </bean>
+
+</beans>

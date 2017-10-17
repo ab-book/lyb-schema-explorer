@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+    <!-- 将userService暴露为远程服务 -->
+    <bean name="serviceHessianExport" class="org.springframework.remoting.caucho.HessianServiceExporter">
+        <property name="service" ref="userService" />
+        <property name="serviceInterface" value="rpc.common.UserService" />
+    </bean>
+
+
+
+
+</beans>

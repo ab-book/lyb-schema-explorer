@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.woden:woden-core:1.0M10">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/woden/woden-core/1.0M10/woden-core-1.0M10.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/woden/woden-core/1.0M10/woden-core-1.0M10-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/woden/woden-core/1.0M10/woden-core-1.0M10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

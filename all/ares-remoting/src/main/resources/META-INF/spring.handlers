@@ -1,0 +1,2 @@
+http\://www.ares-remoting.com/schema/ares-service=ares.remoting.framework.spring.AresRemoteServiceNamespaceHandler
+http\://www.ares-remoting.com/schema/ares-reference=ares.remoting.framework.spring.AresRemoteReferenceNamespaceHandler

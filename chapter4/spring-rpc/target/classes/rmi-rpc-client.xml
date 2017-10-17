@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+
+    <!-- 客户端调用远程服务 -->
+    <bean id="userRmiServiceProxy" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+        <!-- 接收的rmi协议 -->
+        <property name="serviceUrl" value="rmi://127.0.0.1:1199/userRmiService"/>
+        <!-- 接收的rmi协议的接口 -->
+        <property name="serviceInterface" value="rpc.common.UserService"/>
+    </bean>
+
+</beans>

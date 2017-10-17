@@ -1,0 +1,29 @@
+//指定protobuf3语法
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "grpc.example";
+option java_outer_classname = "HelloProto";
+option objc_class_prefix = "HLW";
+
+//与java_package组成完整的包路径
+package service;
+
+//定义服务接口
+service HelloService {
+    rpc SayHello (HelloRequest) returns (HelloResponse) {}
+}
+
+//定义接口方法参数对象
+message HelloRequest {
+    string name = 1;
+}
+
+//定义接口方法返回对象
+message HelloResponse {
+    string message = 1;
+}
+
+
+
+

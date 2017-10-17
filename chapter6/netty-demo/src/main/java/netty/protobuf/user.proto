@@ -1,0 +1,17 @@
+syntax="proto2";
+
+package netty.protobuf;
+
+option java_package="netty.protobuf";
+option java_outer_classname="UserInfo";
+
+
+message User{
+	
+  required string name =1;
+  required int64 userId =2;
+  optional string email=3;
+  optional string mobile=4;
+  optional string remark=5;
+
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:AresClient="http://www.ares-remoting.com/schema/ares-reference"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.ares-remoting.com/schema/ares-reference http://www.ares-remoting.com/schema/ares-reference.xsd">
+
+
+    <!-- 引入远程服务 -->
+    <AresClient:reference id="remoteHelloService"
+                          interface="ares.remoting.test.HelloService"
+                          clusterStrategy="WeightRandom"
+                          remoteAppKey="ares"
+                          groupName="default"
+                          timeout="3000"/>
+
+
+</beans>

@@ -1,0 +1,22 @@
+@namespace("avro")//包名
+protocol ExampleService { //接口类类名
+
+  //定义枚举
+  enum Suit {
+    SPADES, DIAMONDS, CLUBS, HEARTS
+  }
+
+  //定义record,类似于C语言结构体,可以看做java语言的类
+  record DataExample {
+    string name; //字符串类型
+    int age;     //int类型
+    boolean success; //bool类型
+    Suit suit;  //自定义枚举类型
+    @javaclass("java.util.ArrayList")array<string> addressList; //数组类型
+    map<string> demoMap;
+  }
+
+  //rpc服务接口方法
+  void sayHello(string content,DataExample data);
+
+}
